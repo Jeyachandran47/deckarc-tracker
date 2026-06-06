@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "../lib/supabase";
 import Navbar from "../components/Navbar";
+import NotificationBar from '../components/NotificationBar'
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -150,6 +151,7 @@ const cards = [
 
   return (
     <div className="space-y-8">
+      <NotificationBar /> 
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
         {cards.map((card) => (
           <div
