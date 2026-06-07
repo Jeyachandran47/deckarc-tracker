@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { supabase } from "../lib/supabase";
 import Navbar from "../components/Navbar";
 import NotificationBar from '../components/NotificationBar'
+import DemoSection from '../components/DemoSection'
+import FoundingPilot from '../components/FoundingPilot'
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -183,6 +185,8 @@ const cards = [
           </button>
         ))}
       </div>
+      <DemoSection />
+      <FoundingPilot />
     </div>
   );
 }
@@ -222,6 +226,8 @@ function GCView({ stats, router }) {
           </button>
         ))}
       </div>
+      <DemoSection />
+      <FoundingPilot />
     </div>
   );
 }
@@ -252,6 +258,8 @@ function SubView({ router }) {
           </button>
         ))}
       </div>
+      <DemoSection />
+      <FoundingPilot />
     </div>
   );
 }
@@ -272,6 +280,8 @@ function ClientView({ router }) {
           View My Projects →
         </button>
       </div>
+      <DemoSection />
+      <FoundingPilot />
     </div>
   );
 }
